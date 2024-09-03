@@ -4,7 +4,7 @@
       <tbody>
         <tr>
           <td
-            :title="fullname"
+            :title="name"
             :style="fontColor?'color:'+fontColor:'color: rgb(255, 255, 255);mix-blend-mode: difference'"
           >
             {{ initials }}
@@ -18,9 +18,8 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-// const emit = defineEmits(['state'])
 const props = defineProps({
-  fullname: { type: String, default: "" },
+  name: { type: String, default: "" },
   size: { type: Number, default: 48 },
   radius: {
     type: Number,
@@ -30,7 +29,7 @@ const props = defineProps({
   color: { type: String, default: "" },
   image: { type: String, default: "" },
   fontColor: { type: String },
-  fontSize: { type: String, default: "14px" },
+  fontSize: { type: String},
 })
 
 function toColor(str: String) {
@@ -42,7 +41,7 @@ function toColor(str: String) {
   return "#" + Math.abs(hash).toString(16).substr(0, 6);
 }
 const initials = computed(() => {
-  const words = props.fullname.split(/[\s-]+/);
+  const words = props.name.split(/[\s-]+/);
       return words
         .map((word) => word.substr(0, 1))
         .join("")
@@ -51,25 +50,20 @@ const initials = computed(() => {
 })
 const style = computed(() => {
   const fontSize = initials.value.length > 2 ? props.size / 4 : props.size / 3;
-  console.log(props.size)
       return {
         width: props.size + "px",
         height: props.size + "px",
         "border-radius": props.radius + "%",
-        "font-size": fontSize + "px",
+        "font-size": props.fontSize? props.fontSize+"px" : fontSize + "px",
         "background-color":
-          props.color === "" ? toColor(props.fullname) : props.color,
+          props.color === "" ? toColor(props.name) : props.color,
         "background-image": hasImage ? "url(\"" + props.image + "\")" : "none",
-        // "background-image": "url(\"https://amymhaddad.s3.amazonaws.com/morocco-blue.png\")",
         color: props.fontColor,
         "font-weight": "bold",
         "font-family":  "\"Domine\", serif",
-        // "-webkit-filter": "invert(100%)",
-        // filter: "invert(100%)"
       };
 })
 const hasImage = computed(() => {
-  console.log(props.image !== "")
   return props.image !== "";
 })
 </script>
@@ -95,6 +89,7 @@ const hasImage = computed(() => {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  position: relative;
 }
 .avatar table {
   width: 100%;
