@@ -59,8 +59,8 @@ const style = computed(() => {
           props.color === "" ? toColor(props.name) : props.color,
         "background-image": hasImage ? "url(\"" + props.image + "\")" : "none",
         color: props.fontColor,
-        "font-weight": "bold",
-        "font-family":  "\"Domine\", serif",
+        "font-weight": "700",
+        "font-family":  "\"Poppins\", sans-serif"
       };
 })
 const hasImage = computed(() => {
@@ -69,7 +69,7 @@ const hasImage = computed(() => {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700display=swap");
 
 .avatar {
   display: inline-block;
