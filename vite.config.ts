@@ -9,9 +9,9 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, "src/index.ts"),
-      name: "RAvatarLibrary",
+      name: "AvatarLibrary",
       // the proper extensions will be added
-      fileName: "r-avatar",
+      fileName: "avatar-vue3",
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

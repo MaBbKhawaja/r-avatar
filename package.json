@@ -1,16 +1,16 @@
 {
-  "name": "r-avatar",
-  "version": "1.0.0",
+  "name": "avatar-vue3",
+  "version": "0.0.1",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/r-avatar.umd.cjs",
-  "module": "./dist/r-avatar.js",
+  "main": "./dist/avatar-vue3.umd.cjs",
+  "module": "./dist/avatar-vue3.js",
   "exports": {
     ".": {
-      "import": "./dist/r-avatar.js",
-      "require": "./dist/r-avatar.umd.cjs"
+      "import": "./dist/avatar-vue3.js",
+      "require": "./dist/avatar-vue3.umd.cjs"
     },
     "./style.css": "./dist/style.css"
   },
@@ -24,7 +24,6 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "test-component-lib": "file:../test-component-lib",
     "vue": "^3.2.47"
   },
   "devDependencies": {
