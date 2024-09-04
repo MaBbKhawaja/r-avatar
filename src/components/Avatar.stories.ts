@@ -8,47 +8,76 @@ const meta = {
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   argTypes: {
-    // size: { control: 'number' },
-    // backgroundColor: { control: 'color' },
+    image: {control: 'text'},
+    fontColor: {control: 'color'},
+    name: {control: 'text'},
+    size: {control: 'number'},
+    color: {control: 'color'},
+    fontSize: {control: 'number'}
   },
   args: {
-    // primary: false,
-    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-    // onClick: fn(),
+    // image: "https://amymhaddad.s3.amazonaws.com/morocco-blue.png",
+    // fontColor: "red",
+    name: "Mirza",
+    size: 200,
   },
 } satisfies Meta<typeof Avatar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/api/csf
- * to learn how to use render functions.
- */
-export const Primary: Story = {
+
+
+export const WithBackgroundImage: Story = {
   args: {
-    // primary: true,
-    // label: 'Avatar',
+    image: "https://amymhaddad.s3.amazonaws.com/morocco-blue.png",
+    name: "Mirza",
+    size: 200,
+    color: "orange",
+    fontSize: 90
   },
 };
 
-export const Secondary: Story = {
+export const WithoutBackgroundImage: Story = {
   args: {
-    // primary: false,
-    // label: 'Avatar',
+    name: "Mirza",
+    size: 200,
+    color: "orange",
+    fontSize: 90
   },
 };
 
-export const Large: Story = {
+export const WithFontColor: Story = {
   args: {
-    // label: 'Avatar',
-    // size: 'large',
+    fontColor: "red",
+    name: "Mirza",
+    size: 200,
+    color: "#000",
+    fontSize: 90
   },
 };
 
-export const Small: Story = {
+export const fontSize: Story = {
   args: {
-    // label: 'Avatar',
-    // size: 'small',
+    fontColor: "red",
+    name: "Mirza",
+    size: 200,
+    color: "#000",
+    fontSize: 20
+  },
+};
+export const AvatarSize: Story = {
+  args: {
+    fontColor: "red",
+    name: "Mirza",
+    size: 100,
+    color: "#000",
+  },
+};
+export const BorderRadius: Story = {
+  args: {
+    fontColor: "red",
+    name: "Mirza Anees baig Barlas",
+    size: 100,
+    radius: 20
   },
 };

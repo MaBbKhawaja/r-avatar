@@ -29,7 +29,7 @@ const props = defineProps({
   color: { type: String, default: "" },
   image: { type: String, default: "" },
   fontColor: { type: String },
-  fontSize: { type: String},
+  fontSize: { type: Number},
 })
 
 function toColor(str: String) {
