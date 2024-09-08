@@ -11,11 +11,11 @@ It is useful when someone doesn't upload a picture in your web app, instead of s
 
 # Examples
 
-**Anees** will become **A**
-**Anees Baig** will become **AB**
-**Mirza Anees Baig** will become **MAB**
-**Mirza Anees Baig Barlas** will become **MABB**
-**Anees-Baig** will become **AB**
+- **Anees** will become **A**
+- **Anees Baig** will become **AB**
+- **Mirza Anees Baig** will become **MAB**
+- **Mirza Anees Baig Barlas** will become **MABB**
+- **Anees-Baig** will become **AB**
 
 # Usage
 
@@ -37,3 +37,24 @@ In file where you want to use the component add these imports
 or
 
     <Avatar name="John Smith"/>
+
+# Props
+
+|  Property | Type  | Default | Decription |
+|--|--|--|--|
+|name  | String | - | Name you want to make avatar for |
+|size|Number|48|size of the avatar component, width and height are same in **px**|
+|image| String  | - | If you want to pass an image instead of a background color |
+|color  | String | - | Color of background, otherwise it will be a random color  |
+|fontSize|Number|-|Size of font in **px**, otherwise it will be adjusted according to the size of avatar|
+|radius| Number | 50 | Border radius of the avatar component in **px**, validation value  >=  0  &&  value  <=  50 |
+|fontColor| String | - | Font color of Avatar initials else it will blend according to background|
+
+# Playground
+
+Go to https://mabbkhawaja.github.io/avatar-vue3/?path=/docs/avatar--docs for live examples
+
+
+<p align="center">
+  <img src="src/assets/pic.png" title="hover text">\
+</p>
