@@ -15,7 +15,7 @@ import Avatar from './components/Avatar.vue'
     :size="200" 
     image="https://amymhaddad.s3.amazonaws.com/morocco-blue.png" 
   />
-test
+
 </template>
 
 <style scoped>
