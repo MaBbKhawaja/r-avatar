@@ -29,7 +29,6 @@ jobs:
 
         name: Publish package on NPM 📦
         run: npm publish
-        
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.AVATAR_VUE3_AUTOMATE_NPM }}
