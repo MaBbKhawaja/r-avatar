@@ -27,7 +27,7 @@ jobs:
       - name: Semantic Release
         run: npx semantic-release
 
-        name: Publish package on NPM
+        name: Publish on npm
         run: npm publish
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
