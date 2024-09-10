@@ -1,4 +1,13 @@
-## 0.0.4 (2024-09-10)
+## [0.0.5](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.4...v0.0.5) (2024-09-10)
+
+
+### Bug Fixes
+
+* added permissions ([510098f](https://github.com/MaBbKhawaja/avatar-vue3/commit/510098f4f633b9cb382cc442fab36073bdaafa55))
+
+
+
+## [0.0.4](https://github.com/MaBbKhawaja/avatar-vue3/compare/1d07a5b63a78d21c78a3dea8498e6793e8359ba1...v0.0.4) (2024-09-10)
 
 
 ### Bug Fixes
