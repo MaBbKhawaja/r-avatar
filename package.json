@@ -1,7 +1,7 @@
 {
   "name": "avatar-vue3",
   "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "files": [
     "dist"
   ],
@@ -16,7 +16,12 @@
   },
   "types": "./dist/index.d.ts",
   "homepage": "https://github.com/MaBbKhawaja/avatar-vue3",
-  "keywords": ["avatar", "display picture", "vue3 avatar", "image placeholder"],
+  "keywords": [
+    "avatar",
+    "display picture",
+    "vue3 avatar",
+    "image placeholder"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build && vue-tsc --emitDeclarationOnly",

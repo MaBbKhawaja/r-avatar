@@ -1,3 +1,12 @@
+## [0.0.7](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.6...v0.0.7) (2024-09-10)
+
+
+### Bug Fixes
+
+* added keywords ([111976f](https://github.com/MaBbKhawaja/avatar-vue3/commit/111976f425ed4c023dbcc94439aadda759be01e1))
+
+
+
 ## [0.0.6](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.5...v0.0.6) (2024-09-10)
 
 
