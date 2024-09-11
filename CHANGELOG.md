@@ -1,3 +1,12 @@
+## [0.0.8](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.7...v0.0.8) (2024-09-11)
+
+
+### Bug Fixes
+
+* added a prop for splitting characters so users can handle it through props ([64f615f](https://github.com/MaBbKhawaja/avatar-vue3/commit/64f615f96e231566fc7bbbff07ba7230cdedfca2))
+
+
+
 ## [0.0.7](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.6...v0.0.7) (2024-09-10)
 
 
