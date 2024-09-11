@@ -28,6 +28,7 @@ const props = defineProps({
   fontColor: { type: String, default: "rgb(255, 255, 255)" },
   fontSize: { type: Number },
   blend: { type: Boolean, default: true },
+  splitTo: {type: Number, default: 4}
 });
 
 function toColor(str: String) {
@@ -43,7 +44,7 @@ const initials = computed(() => {
   return words
     .map((word) => word.substr(0, 1))
     .join("")
-    .substr(0, 4)
+    .substr(0, props.splitTo)
     .toUpperCase();
 });
 const style = computed(() => {
