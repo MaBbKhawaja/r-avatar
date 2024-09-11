@@ -1,12 +1,9 @@
 <template>
-   <div :style="style" class="avatar">
+  <div :style="style" class="avatar">
     <table>
       <tbody>
         <tr>
-          <td
-            :title="name"
-            :style="fontColor?'color:'+fontColor:'color: rgb(255, 255, 255);mix-blend-mode: difference'"
-          >
+          <td :title="name" :style="initialsStyle">
             {{ initials }}
           </td>
         </tr>
@@ -16,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from "vue";
 
 const props = defineProps({
   name: { type: String, default: "" },
@@ -28,9 +25,10 @@ const props = defineProps({
   },
   color: { type: String, default: "" },
   image: { type: String, default: "" },
-  fontColor: { type: String },
-  fontSize: { type: Number},
-})
+  fontColor: { type: String, default: "rgb(255, 255, 255)" },
+  fontSize: { type: Number },
+  blend: { type: Boolean, default: true },
+});
 
 function toColor(str: String) {
   let hash = 0;
@@ -42,30 +40,36 @@ function toColor(str: String) {
 }
 const initials = computed(() => {
   const words = props.name.split(/[\s-]+/);
-      return words
-        .map((word) => word.substr(0, 1))
-        .join("")
-        .substr(0, 4)
-        .toUpperCase();
-})
+  return words
+    .map((word) => word.substr(0, 1))
+    .join("")
+    .substr(0, 4)
+    .toUpperCase();
+});
 const style = computed(() => {
   const fontSize = initials.value.length > 2 ? props.size / 4 : props.size / 3;
-      return {
-        width: props.size + "px",
-        height: props.size + "px",
-        "border-radius": props.radius + "%",
-        "font-size": props.fontSize? props.fontSize+"px" : fontSize + "px",
-        "background-color":
-          props.color === "" ? toColor(props.name) : props.color,
-        "background-image": hasImage ? "url(\"" + props.image + "\")" : "none",
-        color: props.fontColor,
-        "font-weight": "700",
-        "font-family":  "\"Poppins\", sans-serif"
-      };
-})
+  return {
+    width: props.size + "px",
+    height: props.size + "px",
+    "border-radius": props.radius + "%",
+    "font-size": props.fontSize ? props.fontSize + "px" : fontSize + "px",
+    "background-color": props.color === "" ? toColor(props.name) : props.color,
+    "background-image": hasImage ? 'url("' + props.image + '")' : "none",
+    color: props.fontColor,
+    "font-weight": "700",
+    "font-family": '"Poppins", sans-serif',
+  };
+});
 const hasImage = computed(() => {
   return props.image !== "";
-})
+});
+
+const initialsStyle = computed(() => {
+  return {
+    color: props.fontColor,
+    "mix-blend-mode": props.blend ? "difference" : "",
+  };
+});
 </script>
 
 <style scoped>
@@ -101,7 +105,6 @@ const hasImage = computed(() => {
 .avatar table td {
   text-align: center;
   vertical-align: middle;
-  
 }
 .avatar img {
   width: 100%;
