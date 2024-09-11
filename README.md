@@ -48,7 +48,10 @@ or
 |color  | String | - | Color of background, otherwise it will be a random color  |
 |fontSize|Number|-|Size of font in **px**, otherwise it will be adjusted according to the size of avatar|
 |radius| Number | 50 | Border radius of the avatar component in **px**, validation value  >=  0  &&  value  <=  50 |
-|fontColor| String | - | Font color of Avatar initials else it will blend according to background|
+|fontColor| String | rgb(255, 255, 255) | Font color of Avatar initials|
+|blend| Boolean | true | Blend name colors with the background color for contrast|
+|splitTo| Number | 4 | The number of characters the name can split to|
+
 
 # Playground
 
@@ -56,5 +59,5 @@ Go to https://mabbkhawaja.github.io/avatar-vue3/?path=/docs/avatar--docs for liv
 
 
 <p align="center">
-  <img src="src/assets/pic.png" title="hover text">\
+  <img src="https://drive.google.com/file/d/1ay5UNE7EGKnb64fqYUJPyhFFOyx4CSbv/view?usp=drive_link" title="screenshot">\
 </p>
