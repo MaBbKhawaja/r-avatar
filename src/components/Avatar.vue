@@ -3,7 +3,7 @@
     <table>
       <tbody>
         <tr>
-          <td :title="name" :style="initialsStyle">
+          <td :title="name" :style="`color: ${props.fontColor}; mix-blend-mode:${blendMode}` ">
             {{ initials }}
           </td>
         </tr>
@@ -24,7 +24,7 @@ const props = defineProps({
     validator: (value: any) => value >= 0 && value <= 50,
   },
   color: { type: String, default: "" },
-  image: { type: String, default: "" },
+  image: { type: String, default: undefined },
   fontColor: { type: String, default: "rgb(255, 255, 255)" },
   fontSize: { type: Number },
   blend: { type: Boolean, default: true },
@@ -55,21 +55,14 @@ const style = computed(() => {
     "border-radius": props.radius + "%",
     "font-size": props.fontSize ? props.fontSize + "px" : fontSize + "px",
     "background-color": props.color === "" ? toColor(props.name) : props.color,
-    "background-image": hasImage ? 'url("' + props.image + '")' : "none",
+    "background-image": props.image!==undefined ? 'url("' + props.image + '")': '',
     color: props.fontColor,
     "font-weight": "700",
     "font-family": '"Poppins", sans-serif',
   };
 });
-const hasImage = computed(() => {
-  return props.image !== "";
-});
-
-const initialsStyle = computed(() => {
-  return {
-    color: props.fontColor,
-    "mix-blend-mode": props.blend ? "difference" : "",
-  };
+const blendMode = computed(() => {
+  return props.blend ? "difference" : "normal"
 });
 </script>
 
