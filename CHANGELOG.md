@@ -1,3 +1,12 @@
+## [0.0.10](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.9...v0.0.10) (2024-09-13)
+
+
+### Bug Fixes
+
+* missing build command ([e501321](https://github.com/MaBbKhawaja/avatar-vue3/commit/e501321bfba1f81ab90c1a9552cc0f4d06fda1e2))
+
+
+
 ## [0.0.9](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.8...v0.0.9) (2024-09-13)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * release package ([bbe89e6](https://github.com/MaBbKhawaja/avatar-vue3/commit/bbe89e6bf554c0b085989452a95e74bda8198af7))
-
-
-
-## [0.0.5](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.4...v0.0.5) (2024-09-10)
-
-
-### Bug Fixes
-
-* added permissions ([510098f](https://github.com/MaBbKhawaja/avatar-vue3/commit/510098f4f633b9cb382cc442fab36073bdaafa55))
 
 
 
