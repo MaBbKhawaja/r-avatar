@@ -1,5 +1,6 @@
 {
   "name": "avatar-vue3",
+  "author": "Mirza Anees Baig Barlas",
   "type": "module",
   "version": "0.0.8",
   "files": [
@@ -15,7 +16,11 @@
     "./style.css": "./dist/style.css"
   },
   "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/MaBbKhawaja/avatar-vue3",
+  "homepage": "https://mabbkhawaja.github.io/avatar-vue3/?path=/docs/avatar--docs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaBbKhawaja/avatar-vue3"
+  },
   "keywords": [
     "avatar",
     "display picture",
