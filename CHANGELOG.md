@@ -1,3 +1,12 @@
+## [0.0.11](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.10...v0.0.11) (2024-09-13)
+
+
+### Bug Fixes
+
+* error resolved in yml file ([4929e9d](https://github.com/MaBbKhawaja/avatar-vue3/commit/4929e9d81b97592a0b2b3832ad118c118e3b8380))
+
+
+
 ## [0.0.10](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.9...v0.0.10) (2024-09-13)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * added keywords ([111976f](https://github.com/MaBbKhawaja/avatar-vue3/commit/111976f425ed4c023dbcc94439aadda759be01e1))
-
-
-
-## [0.0.6](https://github.com/MaBbKhawaja/avatar-vue3/compare/v0.0.5...v0.0.6) (2024-09-10)
-
-
-### Bug Fixes
-
-* release package ([bbe89e6](https://github.com/MaBbKhawaja/avatar-vue3/commit/bbe89e6bf554c0b085989452a95e74bda8198af7))
 
 
 
