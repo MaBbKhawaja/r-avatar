@@ -59,5 +59,5 @@ Go to https://mabbkhawaja.github.io/avatar-vue3/?path=/docs/avatar--docs for liv
 
 
 <p align="center">
-  <img src="https://drive.google.com/file/d/1ay5UNE7EGKnb64fqYUJPyhFFOyx4CSbv/view?usp=drive_link" title="screenshot">\
+  <img src="public/avatar_examples.png" title="screenshot">
 </p>
